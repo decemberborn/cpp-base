@@ -25,4 +25,4 @@ WORKDIR     cmake-3.3.0
 RUN         ./bootstrap \
                 && make \
                 && make install
-
+RUN         cd .. && rm -rf cmake-3.3.0
