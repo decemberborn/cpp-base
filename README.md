@@ -1,5 +1,5 @@
 This Docker image is used at Decemberborn Interactive to automate
-builds and running unit tests for [http://decemberborn.com/games/cathedral](Cathedral) in our CI environment.
+builds and running unit tests for [Cathedral](http://decemberborn.com/games/cathedral) in our CI environment.
 
 We initially used https://github.com/andystanton/docker-gcc-cmake-gl
 as a base, but decided to create our own version instead of
