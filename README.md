@@ -6,7 +6,7 @@ as a base, but decided to create our own version instead of
 updating/installing packages such as a newer CMake on each build. This
 significantly reduces our CI build times.
 
-The main technologies used is `gcc 4.9`, `boost 1.57`, `CMake 3.3`,
+The main technologies used are `gcc 4.9`, `boost 1.57`, `CMake 3.3`,
 `Python 2.7`. We also install `Pillow` that we use for texture loading
 in prebuild steps.
 
