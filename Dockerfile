@@ -18,7 +18,10 @@ RUN         apt-get update \
                     gcc-4.9 g++-4.9 gcc-4.9-base \
                 && update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-4.9 100 \
                 && update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-4.9 100 \
-                && pip install Pillow
+                && pip install Pillow \
+                && apt-get install -y python3 \
+                && apt-get install -y python3-pip \
+                && pip3 install Pillow
 
 RUN         curl -O https://cmake.org/files/v3.3/cmake-3.3.0.tar.gz && tar -xvf cmake-3.3.0.tar.gz
 WORKDIR     cmake-3.3.0
