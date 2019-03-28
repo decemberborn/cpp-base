@@ -1,5 +1,6 @@
 FROM        ubuntu:14.04
 MAINTAINER  dborn
+RUN         sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 RUN         apt-get update \
                 && apt-get -y build-dep python-imaging \
                 && apt-get install -y libopenal1 libopenal-dev \
