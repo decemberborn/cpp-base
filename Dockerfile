@@ -9,7 +9,7 @@ RUN         apt-get update \
                    tcl8.6-dev tk8.6-dev python-tk python-pip \
                    software-properties-common wget \
                 && echo 'deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.4 main' >> /etc/apt/sources.list \
-                && wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|sudo apt-key add - \
+                && wget -O - http://llvm.org/apt/llvm-snapshot.gpg.key|apt-key add - \
                 && add-apt-repository -y ppa:ubuntu-toolchain-r/test \
                 && add-apt-repository -y ppa:afrank/boost \
                 && apt-get update \
@@ -22,7 +22,8 @@ RUN         apt-get update \
                 && pip install Pillow \
                 && apt-get install -y python3 \
                 && apt-get install -y python3-pip \
-                && pip3 install Pillow
+                && pip3 install Pillow \
+                && apt-get install -y lib32gcc1
 
 RUN         curl -O https://cmake.org/files/v3.3/cmake-3.3.0.tar.gz && tar -xvf cmake-3.3.0.tar.gz
 WORKDIR     cmake-3.3.0
